@@ -1,0 +1,55 @@
+$cor1: #fcfce4;
+$cor2: #f9ecc9;
+$cor3: #ba9470;
+$cor4: #544100;
+
+@mixin display-flex($direction, $justfy) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justfy;
+
+    }
+
+nav {
+
+    @include display-flex(row, space-between);
+
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    ul {
+        @include display-flex(row, space-around);
+    }
+
+    li {
+        list-style: none;
+        padding: 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: $cor4;
+    }
+}
+
+main {
+    background-image: url("https://img.freepik.com/premium-photo/rustic-bread-bakery-background_776894-182989.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 500px;
+    text-align: center;
+    align-items: center;
+    @include display-flex(column, center);
+
+}
+
+.ultimo-conteudo-adc {
+    table {
+        width: 100%;
+        color: ;
+        text-align: center;
+    }
+}

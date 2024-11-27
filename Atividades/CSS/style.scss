@@ -1,4 +1,4 @@
-$cor-1:  #f4efec;
+$cor-1: #f4efec;
 $cor-2: #ddb7ac;
 $cor-3: #f0d9d1;
 $cor-4: #999b85;
@@ -31,15 +31,46 @@ form {
 
 }
 
-h1,h2,h3 {
+h1,
+h2,
+h3 {
     color: #999b85;
     padding: 10px;
     font-family: $titulo;
-  }
-  
-  section {
+}
+
+section {
     background-color: $cor-3;
     border: 2px solid $cor-5;
     margin: 10px;
     padding: 10px;
-  }
+}
+
+.atividadeMixin {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @mixin card ($bg-color, $text-color, $border-radius) {
+        background-color: $bg-color;
+        color: $text-color;
+        padding: 10px;
+        border-radius: $border-radius;
+        box-shadow: 10px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .card-primario {
+        @include card(#3c485e, #ecefde, 3px);
+    }
+
+    .card-secundario {
+        @include card(#bb9684, #496043, 4px);
+    }
+
+    .card-terciario {
+        @include card(#d2bfb1, black, 5px);
+    }
+}
+
