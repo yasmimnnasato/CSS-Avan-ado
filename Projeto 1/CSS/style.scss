@@ -1,23 +1,25 @@
 $cor1: #fcfce4;
 $cor2: #f9ecc9;
 $cor3: #ba9470;
-$cor4: #544100;
+$cortitulo: #544100;
+$titulo: Verdana, Geneva, Tahoma, sans-serif;
 
 @mixin display-flex($direction, $justfy) {
-        display: flex;
-        flex-direction: $direction;
-        justify-content: $justfy;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justfy;
 
-    }
+}
 
 nav {
 
     @include display-flex(row, space-between);
 
+    background-color: #efead9;
 
     img {
-        width: 250px;
-        height: 250px;
+        width: 100px;
+        height: 100px;
     }
 
     ul {
@@ -31,7 +33,9 @@ nav {
 
     a {
         text-decoration: none;
-        color: $cor4;
+        color: $cortitulo;
+        font-family: $titulo;
+        font-weight: 900;
     }
 }
 
@@ -43,13 +47,81 @@ main {
     text-align: center;
     align-items: center;
     @include display-flex(column, center);
+    font-family: $titulo;
 
 }
 
 .ultimo-conteudo-adc {
+    @include display-flex (column, center);
+
+    h2 {
+        text-align: center;
+        color: $titulo, $cortitulo;
+    }
+
     table {
         width: 100%;
-        color: ;
         text-align: center;
+        color: black;
+        border-collapse: collapse;
+        background-color: #e9e9e1;
+
+
+
+        td,
+        th {
+            border: 4px solid black;
+            padding: 10px;
+        }
+
+        .Pastel {
+            background-color: $cor2;
+        }
+
+        .Pudim {
+            background-color: #f0ead5;
+        }
+
+        .Bomba {
+            background-color: #cfc7b4;
+        }
+
+        thead {
+            font-family: $titulo;
+            color: $cortitulo;
+
+        }
+
+        .score {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+
+            .like {
+                color: green;
+            }
+
+            .dislike {
+                color: red;
+            }
+
+            .estrela {
+                color: goldenrod;
+            }
+        }
+    }
+
+    .botao {
+        @include display-flex(row,center );
+        button {
+            padding: 15px;
+            background-color: whitesmoke;
+            border: 1px solid $cor2;
+            color: $cor2;
+            border-radius: 10px;
+            text-transform: uppercase;
+            font-family: $titulo;
+        }
     }
 }
