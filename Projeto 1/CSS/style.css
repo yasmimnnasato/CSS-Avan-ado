@@ -100,3 +100,50 @@ main {
   text-transform: uppercase;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+footer {
+  display: center;
+  flex-direction: row;
+  background-color: white;
+}
+footer .col-1 {
+  width: 8.3333333333%;
+}
+footer .col-2 {
+  width: 16.6666666667%;
+}
+footer .col-3 {
+  width: 25%;
+}
+footer .col-4 {
+  width: 33.3333333333%;
+}
+footer .col-5 {
+  width: 41.6666666667%;
+}
+footer .col-6 {
+  width: 50%;
+}
+footer .col-7 {
+  width: 58.3333333333%;
+}
+footer .col-8 {
+  width: 66.6666666667%;
+}
+footer .col-9 {
+  width: 75%;
+}
+footer .col-10 {
+  width: 83.3333333333%;
+}
+footer .col-11 {
+  width: 91.6666666667%;
+}
+footer .col-12 {
+  width: 100%;
+}
+footer div {
+  height: 100px;
+  background-color: #999b85;
+  border: 2px solid white;
+}

@@ -6,6 +6,7 @@ $cor-5: black;
 $cor-alerta: #ff7b7b;
 $titulo: Georgia, 'Times New Roman', Times, serif;
 
+
 body {
     background-color: $cor-1;
 }
@@ -75,10 +76,26 @@ section {
 }
 
 .loops {
-   @for $i from 1 through 12 {
-    .col- #{$i} {
-        width: calc(100% / 12) * $i;
-    }
-   }
-}
 
+    $tamanhoTela: 12;
+
+    @for $i from 1 through $tamanhoTela {
+        .col-#{$i} {
+            width: calc(100% / $tamanhoTela) * $i;
+        }
+
+    }
+
+    div {
+        height: 50px;
+        background-color: #999b85;
+        border: 2px solid white;
+    }
+
+    .linha {
+
+        display: flex;
+        flex-direction: row;
+        background-color: white;
+    }
+}

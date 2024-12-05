@@ -125,3 +125,28 @@ main {
         }
     }
 }
+
+footer  {
+
+        $tamanhoTela: 12;
+
+          display: flex;
+            flex-direction: row;
+            background-color: white;
+            justify-content: center;
+        
+        @for $i from 1 through $tamanhoTela {
+            .col-#{$i} {
+                width: calc(100% / $tamanhoTela) * $i;
+            }
+    
+        }
+
+        div {
+    
+            height: 100px;
+    background-color: #efead9;
+            border: 2px solid white;
+        }
+      
+     }
